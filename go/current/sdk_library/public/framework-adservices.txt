@@ -134,16 +134,19 @@ package android.adservices.adselection {
 
   public final class GetAdSelectionDataOutcome {
     method @Nullable public byte[] getAdSelectionData();
+    method public long getAdSelectionDataId();
     method @Deprecated public long getAdSelectionId();
   }
 
   public final class GetAdSelectionDataRequest {
+    method @Nullable public android.net.Uri getCoordinatorOriginUri();
     method @Nullable public android.adservices.common.AdTechIdentifier getSeller();
   }
 
   public static final class GetAdSelectionDataRequest.Builder {
     ctor public GetAdSelectionDataRequest.Builder();
     method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest build();
+    method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest.Builder setCoordinatorOriginUri(@Nullable android.net.Uri);
     method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest.Builder setSeller(@Nullable android.adservices.common.AdTechIdentifier);
   }
 
@@ -157,6 +160,7 @@ package android.adservices.adselection {
   }
 
   public final class PersistAdSelectionResultRequest {
+    method public long getAdSelectionDataId();
     method @Deprecated public long getAdSelectionId();
     method @Nullable public byte[] getAdSelectionResult();
     method @Nullable public android.adservices.common.AdTechIdentifier getSeller();
@@ -165,6 +169,7 @@ package android.adservices.adselection {
   public static final class PersistAdSelectionResultRequest.Builder {
     ctor public PersistAdSelectionResultRequest.Builder();
     method @NonNull public android.adservices.adselection.PersistAdSelectionResultRequest build();
+    method @NonNull public android.adservices.adselection.PersistAdSelectionResultRequest.Builder setAdSelectionDataId(long);
     method @Deprecated @NonNull public android.adservices.adselection.PersistAdSelectionResultRequest.Builder setAdSelectionId(long);
     method @NonNull public android.adservices.adselection.PersistAdSelectionResultRequest.Builder setAdSelectionResult(@Nullable byte[]);
     method @NonNull public android.adservices.adselection.PersistAdSelectionResultRequest.Builder setSeller(@Nullable android.adservices.common.AdTechIdentifier);
@@ -426,6 +431,7 @@ package android.adservices.customaudience {
     method public int describeContents();
     method @Nullable public java.time.Instant getActivationTime();
     method @NonNull public java.util.List<android.adservices.common.AdData> getAds();
+    method public int getAuctionServerRequestFlags();
     method @NonNull public android.net.Uri getBiddingLogicUri();
     method @NonNull public android.adservices.common.AdTechIdentifier getBuyer();
     method @NonNull public android.net.Uri getDailyUpdateUri();
@@ -435,6 +441,7 @@ package android.adservices.customaudience {
     method @Nullable public android.adservices.common.AdSelectionSignals getUserBiddingSignals();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
     field @NonNull public static final android.os.Parcelable.Creator<android.adservices.customaudience.CustomAudience> CREATOR;
+    field public static final int FLAG_AUCTION_SERVER_REQUEST_OMIT_ADS = 1; // 0x1
   }
 
   public static final class CustomAudience.Builder {
@@ -442,6 +449,7 @@ package android.adservices.customaudience {
     method @NonNull public android.adservices.customaudience.CustomAudience build();
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setActivationTime(@Nullable java.time.Instant);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setAds(@Nullable java.util.List<android.adservices.common.AdData>);
+    method @NonNull public android.adservices.customaudience.CustomAudience.Builder setAuctionServerRequestFlags(int);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setBiddingLogicUri(@NonNull android.net.Uri);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setBuyer(@NonNull android.adservices.common.AdTechIdentifier);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setDailyUpdateUri(@NonNull android.net.Uri);
