@@ -203,10 +203,13 @@ Landroid/adservices/adselection/GetAdSelectionDataInput;->equals(Ljava/lang/Obje
 Landroid/adservices/adselection/GetAdSelectionDataInput;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataInput;->writeToParcel(Landroid/os/Parcel;I)V,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataOutcome;->getAdSelectionData()[B,public-api,system-api,test-api
+Landroid/adservices/adselection/GetAdSelectionDataOutcome;->getAdSelectionDataId()J,public-api
 Landroid/adservices/adselection/GetAdSelectionDataOutcome;->getAdSelectionId()J,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;-><init>()V,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;->build()Landroid/adservices/adselection/GetAdSelectionDataRequest;,public-api,system-api,test-api
+Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;->setCoordinatorOriginUri(Landroid/net/Uri;)Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;,public-api
 Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;->setSeller(Landroid/adservices/common/AdTechIdentifier;)Landroid/adservices/adselection/GetAdSelectionDataRequest$Builder;,public-api,system-api,test-api
+Landroid/adservices/adselection/GetAdSelectionDataRequest;->getCoordinatorOriginUri()Landroid/net/Uri;,public-api
 Landroid/adservices/adselection/GetAdSelectionDataRequest;->getSeller()Landroid/adservices/common/AdTechIdentifier;,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataResponse$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,system-api,test-api
 Landroid/adservices/adselection/GetAdSelectionDataResponse$1;->newArray(I)[Ljava/lang/Object;,public-api,system-api,test-api
@@ -236,9 +239,11 @@ Landroid/adservices/adselection/PersistAdSelectionResultInput;->hashCode()I,core
 Landroid/adservices/adselection/PersistAdSelectionResultInput;->writeToParcel(Landroid/os/Parcel;I)V,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;-><init>()V,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;->build()Landroid/adservices/adselection/PersistAdSelectionResultRequest;,public-api,system-api,test-api
+Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;->setAdSelectionDataId(J)Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;,public-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;->setAdSelectionId(J)Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;->setAdSelectionResult([B)Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;->setSeller(Landroid/adservices/common/AdTechIdentifier;)Landroid/adservices/adselection/PersistAdSelectionResultRequest$Builder;,public-api,system-api,test-api
+Landroid/adservices/adselection/PersistAdSelectionResultRequest;->getAdSelectionDataId()J,public-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest;->getAdSelectionId()J,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest;->getAdSelectionResult()[B,public-api,system-api,test-api
 Landroid/adservices/adselection/PersistAdSelectionResultRequest;->getSeller()Landroid/adservices/common/AdTechIdentifier;,public-api,system-api,test-api
@@ -695,6 +700,7 @@ Landroid/adservices/customaudience/CustomAudience$Builder;-><init>()V,public-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->build()Landroid/adservices/customaudience/CustomAudience;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setActivationTime(Ljava/time/Instant;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setAds(Ljava/util/List;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
+Landroid/adservices/customaudience/CustomAudience$Builder;->setAuctionServerRequestFlags(I)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setBiddingLogicUri(Landroid/net/Uri;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setBuyer(Landroid/adservices/common/AdTechIdentifier;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setDailyUpdateUri(Landroid/net/Uri;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
@@ -703,10 +709,12 @@ Landroid/adservices/customaudience/CustomAudience$Builder;->setName(Ljava/lang/S
 Landroid/adservices/customaudience/CustomAudience$Builder;->setTrustedBiddingData(Landroid/adservices/customaudience/TrustedBiddingData;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience$Builder;->setUserBiddingSignals(Landroid/adservices/common/AdSelectionSignals;)Landroid/adservices/customaudience/CustomAudience$Builder;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->CREATOR:Landroid/os/Parcelable$Creator;,public-api,system-api,test-api
+Landroid/adservices/customaudience/CustomAudience;->FLAG_AUCTION_SERVER_REQUEST_OMIT_ADS:I,public-api
 Landroid/adservices/customaudience/CustomAudience;->describeContents()I,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->getActivationTime()Ljava/time/Instant;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->getAds()Ljava/util/List;,public-api,system-api,test-api
+Landroid/adservices/customaudience/CustomAudience;->getAuctionServerRequestFlags()I,public-api
 Landroid/adservices/customaudience/CustomAudience;->getBiddingLogicUri()Landroid/net/Uri;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->getBuyer()Landroid/adservices/common/AdTechIdentifier;,public-api,system-api,test-api
 Landroid/adservices/customaudience/CustomAudience;->getDailyUpdateUri()Landroid/net/Uri;,public-api,system-api,test-api
