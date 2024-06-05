@@ -182,6 +182,7 @@ java_sdk_library_import {
         "android.app.sdksandbox",
         "com.android.sdksandbox",
         "com.android.server.sdksandbox",
+        "com.android.tools.smali.dexlib2",
     ],
     public: {
         jars: ["sdk_library/public/service-sdksandbox-stubs.jar"],
