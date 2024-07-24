@@ -1,11 +1,5 @@
 // This is auto-generated. DO NOT EDIT.
 
-// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
-// to support coexistence.
-blueprint_package_includes {
-    match_all: ["com.android.mainline"]
-}
-
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -139,7 +133,11 @@ java_sdk_library_import {
     apex_available: ["com.android.adservices"],
     licenses: ["adservices-module-sdk_Android-Apache-2.0"],
     shared_library: false,
-    permitted_packages: ["com.android.server.adservices"],
+    permitted_packages: [
+        "com.android.adservices.shared",
+        "com.android.server.adservices",
+        "com.google.errorprone.annotations",
+    ],
     public: {
         jars: ["sdk_library/public/service-adservices-stubs.jar"],
         stub_srcs: ["sdk_library/public/service-adservices.srcjar"],
