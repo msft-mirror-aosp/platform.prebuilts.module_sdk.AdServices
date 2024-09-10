@@ -127,6 +127,7 @@ java_sdk_library_import {
         "com.android.adservices.shared",
         "com.android.adservices.service",
         "com.android.server.adservices",
+        "com.android.adservices.jarjar.server",
         "com.google.errorprone.annotations",
     ],
     public: {
