@@ -141,6 +141,7 @@ package android.adservices.adselection {
   public final class GetAdSelectionDataRequest {
     method @Nullable public android.net.Uri getCoordinatorOriginUri();
     method @Nullable public android.adservices.common.AdTechIdentifier getSeller();
+    method @Nullable public android.adservices.adselection.SellerConfiguration getSellerConfiguration();
   }
 
   public static final class GetAdSelectionDataRequest.Builder {
@@ -148,6 +149,22 @@ package android.adservices.adselection {
     method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest build();
     method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest.Builder setCoordinatorOriginUri(@Nullable android.net.Uri);
     method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest.Builder setSeller(@Nullable android.adservices.common.AdTechIdentifier);
+    method @NonNull public android.adservices.adselection.GetAdSelectionDataRequest.Builder setSellerConfiguration(@Nullable android.adservices.adselection.SellerConfiguration);
+  }
+
+  public final class PerBuyerConfiguration implements android.os.Parcelable {
+    method public int describeContents();
+    method @NonNull public android.adservices.common.AdTechIdentifier getBuyer();
+    method @IntRange(from=0, to=java.lang.Integer.MAX_VALUE) public int getTargetInputSizeBytes();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.adservices.adselection.PerBuyerConfiguration> CREATOR;
+  }
+
+  public static final class PerBuyerConfiguration.Builder {
+    ctor public PerBuyerConfiguration.Builder();
+    method @NonNull public android.adservices.adselection.PerBuyerConfiguration build();
+    method @NonNull public android.adservices.adselection.PerBuyerConfiguration.Builder setBuyer(@NonNull android.adservices.common.AdTechIdentifier);
+    method @NonNull public android.adservices.adselection.PerBuyerConfiguration.Builder setTargetInputSizeBytes(@IntRange(from=0, to=java.lang.Integer.MAX_VALUE) int);
   }
 
   public final class PerBuyerDecisionLogic implements android.os.Parcelable {
@@ -210,6 +227,21 @@ package android.adservices.adselection {
     ctor public ReportImpressionRequest(long);
     method @NonNull public android.adservices.adselection.AdSelectionConfig getAdSelectionConfig();
     method public long getAdSelectionId();
+  }
+
+  public final class SellerConfiguration implements android.os.Parcelable {
+    method public int describeContents();
+    method @IntRange(from=1, to=java.lang.Integer.MAX_VALUE) public int getMaximumPayloadSizeBytes();
+    method @NonNull public java.util.Set<android.adservices.adselection.PerBuyerConfiguration> getPerBuyerConfigurations();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.adservices.adselection.SellerConfiguration> CREATOR;
+  }
+
+  public static final class SellerConfiguration.Builder {
+    ctor public SellerConfiguration.Builder();
+    method @NonNull public android.adservices.adselection.SellerConfiguration build();
+    method @NonNull public android.adservices.adselection.SellerConfiguration.Builder setMaximumPayloadSizeBytes(@IntRange(from=1, to=java.lang.Integer.MAX_VALUE) int);
+    method @NonNull public android.adservices.adselection.SellerConfiguration.Builder setPerBuyerConfigurations(@NonNull java.util.Set<android.adservices.adselection.PerBuyerConfiguration>);
   }
 
   public class SetAppInstallAdvertisersRequest {
@@ -437,6 +469,7 @@ package android.adservices.customaudience {
     method @NonNull public android.net.Uri getDailyUpdateUri();
     method @Nullable public java.time.Instant getExpirationTime();
     method @NonNull public String getName();
+    method public double getPriority();
     method @Nullable public android.adservices.customaudience.TrustedBiddingData getTrustedBiddingData();
     method @Nullable public android.adservices.common.AdSelectionSignals getUserBiddingSignals();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
@@ -455,6 +488,7 @@ package android.adservices.customaudience {
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setDailyUpdateUri(@NonNull android.net.Uri);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setExpirationTime(@Nullable java.time.Instant);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setName(@NonNull String);
+    method @NonNull public android.adservices.customaudience.CustomAudience.Builder setPriority(double);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setTrustedBiddingData(@Nullable android.adservices.customaudience.TrustedBiddingData);
     method @NonNull public android.adservices.customaudience.CustomAudience.Builder setUserBiddingSignals(@Nullable android.adservices.common.AdSelectionSignals);
   }
@@ -465,6 +499,7 @@ package android.adservices.customaudience {
     method @NonNull public android.adservices.customaudience.TestCustomAudienceManager getTestCustomAudienceManager();
     method @RequiresPermission(android.adservices.common.AdServicesPermissions.ACCESS_ADSERVICES_CUSTOM_AUDIENCE) public void joinCustomAudience(@NonNull android.adservices.customaudience.JoinCustomAudienceRequest, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>);
     method @RequiresPermission(android.adservices.common.AdServicesPermissions.ACCESS_ADSERVICES_CUSTOM_AUDIENCE) public void leaveCustomAudience(@NonNull android.adservices.customaudience.LeaveCustomAudienceRequest, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.lang.Object,java.lang.Exception>);
+    method @RequiresPermission(android.adservices.common.AdServicesPermissions.ACCESS_ADSERVICES_CUSTOM_AUDIENCE) public void scheduleCustomAudienceUpdate(@NonNull android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest, @NonNull java.util.concurrent.Executor, @NonNull android.adservices.common.AdServicesOutcomeReceiver<java.lang.Object,java.lang.Exception>);
   }
 
   public final class FetchAndJoinCustomAudienceRequest {
@@ -507,6 +542,24 @@ package android.adservices.customaudience {
     method @NonNull public android.adservices.customaudience.LeaveCustomAudienceRequest.Builder setName(@NonNull String);
   }
 
+  public final class PartialCustomAudience implements android.os.Parcelable {
+    method public int describeContents();
+    method @Nullable public java.time.Instant getActivationTime();
+    method @Nullable public java.time.Instant getExpirationTime();
+    method @NonNull public String getName();
+    method @Nullable public android.adservices.common.AdSelectionSignals getUserBiddingSignals();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.adservices.customaudience.PartialCustomAudience> CREATOR;
+  }
+
+  public static final class PartialCustomAudience.Builder {
+    ctor public PartialCustomAudience.Builder(@NonNull String);
+    method @NonNull public android.adservices.customaudience.PartialCustomAudience build();
+    method @NonNull public android.adservices.customaudience.PartialCustomAudience.Builder setActivationTime(@Nullable java.time.Instant);
+    method @NonNull public android.adservices.customaudience.PartialCustomAudience.Builder setExpirationTime(@Nullable java.time.Instant);
+    method @NonNull public android.adservices.customaudience.PartialCustomAudience.Builder setUserBiddingSignals(@Nullable android.adservices.common.AdSelectionSignals);
+  }
+
   public class RemoveCustomAudienceOverrideRequest {
     ctor public RemoveCustomAudienceOverrideRequest(@NonNull android.adservices.common.AdTechIdentifier, @NonNull String);
     method @NonNull public android.adservices.common.AdTechIdentifier getBuyer();
@@ -518,6 +571,22 @@ package android.adservices.customaudience {
     method @NonNull public android.adservices.customaudience.RemoveCustomAudienceOverrideRequest build();
     method @NonNull public android.adservices.customaudience.RemoveCustomAudienceOverrideRequest.Builder setBuyer(@NonNull android.adservices.common.AdTechIdentifier);
     method @NonNull public android.adservices.customaudience.RemoveCustomAudienceOverrideRequest.Builder setName(@NonNull String);
+  }
+
+  public final class ScheduleCustomAudienceUpdateRequest {
+    method @NonNull public java.time.Duration getMinDelay();
+    method @NonNull public java.util.List<android.adservices.customaudience.PartialCustomAudience> getPartialCustomAudienceList();
+    method @NonNull public android.net.Uri getUpdateUri();
+    method public boolean shouldReplacePendingUpdates();
+  }
+
+  public static final class ScheduleCustomAudienceUpdateRequest.Builder {
+    ctor public ScheduleCustomAudienceUpdateRequest.Builder(@NonNull android.net.Uri, @NonNull java.time.Duration, @NonNull java.util.List<android.adservices.customaudience.PartialCustomAudience>);
+    method @NonNull public android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest build();
+    method @NonNull public android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest.Builder setMinDelay(@NonNull java.time.Duration);
+    method @NonNull public android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest.Builder setPartialCustomAudienceList(@NonNull java.util.List<android.adservices.customaudience.PartialCustomAudience>);
+    method @NonNull public android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest.Builder setShouldReplacePendingUpdates(boolean);
+    method @NonNull public android.adservices.customaudience.ScheduleCustomAudienceUpdateRequest.Builder setUpdateUri(@NonNull android.net.Uri);
   }
 
   public class TestCustomAudienceManager {
