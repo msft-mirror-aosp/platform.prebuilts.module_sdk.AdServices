@@ -18,7 +18,6 @@ signature
 |Lcom/android/adservices/flags/CustomFeatureFlags;->fledgeServerAuctionMultiCloudEnabled()Z|
 |Lcom/android/adservices/flags/CustomFeatureFlags;->getAdservicesCommonStatesApiEnabled()Z|
 |Lcom/android/adservices/flags/CustomFeatureFlags;->protectedSignalsEnabled()Z|
-|Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxDumpEffectiveTargetSdkVersion()Z|
 |Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z|
 |Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z|
 |Lcom/android/adservices/flags/CustomFeatureFlags;->topicsEncryptionEnabled()Z|
@@ -41,7 +40,6 @@ signature
 |Lcom/android/adservices/flags/FeatureFlags;->fledgeServerAuctionMultiCloudEnabled()Z|
 |Lcom/android/adservices/flags/FeatureFlags;->getAdservicesCommonStatesApiEnabled()Z|
 |Lcom/android/adservices/flags/FeatureFlags;->protectedSignalsEnabled()Z|
-|Lcom/android/adservices/flags/FeatureFlags;->sdksandboxDumpEffectiveTargetSdkVersion()Z|
 |Lcom/android/adservices/flags/FeatureFlags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z|
 |Lcom/android/adservices/flags/FeatureFlags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z|
 |Lcom/android/adservices/flags/FeatureFlags;->topicsEncryptionEnabled()Z|
@@ -64,7 +62,6 @@ signature
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->fledgeServerAuctionMultiCloudEnabled()Z|
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->getAdservicesCommonStatesApiEnabled()Z|
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->protectedSignalsEnabled()Z|
-|Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxDumpEffectiveTargetSdkVersion()Z|
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z|
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z|
 |Lcom/android/adservices/flags/FeatureFlagsImpl;->topicsEncryptionEnabled()Z|
@@ -87,7 +84,6 @@ signature
 |Lcom/android/adservices/flags/Flags;->fledgeServerAuctionMultiCloudEnabled()Z|
 |Lcom/android/adservices/flags/Flags;->getAdservicesCommonStatesApiEnabled()Z|
 |Lcom/android/adservices/flags/Flags;->protectedSignalsEnabled()Z|
-|Lcom/android/adservices/flags/Flags;->sdksandboxDumpEffectiveTargetSdkVersion()Z|
 |Lcom/android/adservices/flags/Flags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z|
 |Lcom/android/adservices/flags/Flags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z|
 |Lcom/android/adservices/flags/Flags;->topicsEncryptionEnabled()Z|
