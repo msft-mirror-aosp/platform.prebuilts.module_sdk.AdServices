@@ -1476,7 +1476,6 @@ Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda19;->te
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda1;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda20;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda21;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
-Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda22;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda4;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
@@ -1504,7 +1503,6 @@ Lcom/android/adservices/flags/CustomFeatureFlags;->fledgeScheduleCustomAudienceU
 Lcom/android/adservices/flags/CustomFeatureFlags;->fledgeServerAuctionMultiCloudEnabled()Z,unsupported
 Lcom/android/adservices/flags/CustomFeatureFlags;->getAdservicesCommonStatesApiEnabled()Z,unsupported
 Lcom/android/adservices/flags/CustomFeatureFlags;->protectedSignalsEnabled()Z,unsupported
-Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxDumpEffectiveTargetSdkVersion()Z,unsupported
 Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z,unsupported
 Lcom/android/adservices/flags/CustomFeatureFlags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z,unsupported
 Lcom/android/adservices/flags/CustomFeatureFlags;->topicsEncryptionEnabled()Z,unsupported
@@ -1527,7 +1525,6 @@ Lcom/android/adservices/flags/FeatureFlags;->fledgeScheduleCustomAudienceUpdateE
 Lcom/android/adservices/flags/FeatureFlags;->fledgeServerAuctionMultiCloudEnabled()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlags;->getAdservicesCommonStatesApiEnabled()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlags;->protectedSignalsEnabled()Z,unsupported
-Lcom/android/adservices/flags/FeatureFlags;->sdksandboxDumpEffectiveTargetSdkVersion()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlags;->topicsEncryptionEnabled()Z,unsupported
@@ -1550,7 +1547,6 @@ Lcom/android/adservices/flags/FeatureFlagsImpl;->fledgeScheduleCustomAudienceUpd
 Lcom/android/adservices/flags/FeatureFlagsImpl;->fledgeServerAuctionMultiCloudEnabled()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlagsImpl;->getAdservicesCommonStatesApiEnabled()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlagsImpl;->protectedSignalsEnabled()Z,unsupported
-Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxDumpEffectiveTargetSdkVersion()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlagsImpl;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z,unsupported
 Lcom/android/adservices/flags/FeatureFlagsImpl;->topicsEncryptionEnabled()Z,unsupported
@@ -1573,7 +1569,6 @@ Lcom/android/adservices/flags/Flags;->fledgeScheduleCustomAudienceUpdateEnabled(
 Lcom/android/adservices/flags/Flags;->fledgeServerAuctionMultiCloudEnabled()Z,unsupported
 Lcom/android/adservices/flags/Flags;->getAdservicesCommonStatesApiEnabled()Z,unsupported
 Lcom/android/adservices/flags/Flags;->protectedSignalsEnabled()Z,unsupported
-Lcom/android/adservices/flags/Flags;->sdksandboxDumpEffectiveTargetSdkVersion()Z,unsupported
 Lcom/android/adservices/flags/Flags;->sdksandboxInvalidateEffectiveTargetSdkVersionCache()Z,unsupported
 Lcom/android/adservices/flags/Flags;->sdksandboxUseEffectiveTargetSdkVersionForRestrictions()Z,unsupported
 Lcom/android/adservices/flags/Flags;->topicsEncryptionEnabled()Z,unsupported
