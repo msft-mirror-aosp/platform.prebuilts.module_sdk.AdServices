@@ -184,6 +184,12 @@ license {
     license_text: ["licenses/build/soong/licenses/LICENSE"],
 }
 
+license {
+    name: "adservices-module-sdk_opensourcerequest",
+    visibility: ["//visibility:private"],
+    license_text: ["licenses/build/soong/licenses/opensourcerequest"],
+}
+
 prebuilt_systemserverclasspath_fragment {
     name: "com.android.adservices-systemserverclasspath-fragment",
     visibility: ["//visibility:public"],
