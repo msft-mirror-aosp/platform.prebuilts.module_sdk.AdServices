@@ -76,6 +76,13 @@ package android.adservices.common {
     field public static final int USER_CHOICE_UNKNOWN = 0; // 0x0
   }
 
+  public final class AdServicesModuleStatesResponse implements android.os.Parcelable {
+    method public int describeContents();
+    method @NonNull public android.util.SparseIntArray getModuleStates();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.adservices.common.AdServicesModuleStatesResponse> CREATOR;
+  }
+
   public class AdServicesPermissions {
     field public static final String ACCESS_ADSERVICES_STATE = "android.permission.ACCESS_ADSERVICES_STATE";
     field public static final String ACCESS_ADSERVICES_STATE_COMPAT = "android.permission.ACCESS_ADSERVICES_STATE_COMPAT";
@@ -107,6 +114,13 @@ package android.adservices.common {
     method @NonNull public android.adservices.common.AdServicesStates.Builder setPrivacySandboxUiEnabled(boolean);
     method @NonNull public android.adservices.common.AdServicesStates.Builder setPrivacySandboxUiRequest(boolean);
     method @NonNull public android.adservices.common.AdServicesStates.Builder setU18Account(boolean);
+  }
+
+  public final class AdServicesUserChoicesResponse implements android.os.Parcelable {
+    method public int describeContents();
+    method @NonNull public android.util.SparseIntArray getUserChoices();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.adservices.common.AdServicesUserChoicesResponse> CREATOR;
   }
 
   public final class EnableAdServicesResponse implements android.os.Parcelable {
