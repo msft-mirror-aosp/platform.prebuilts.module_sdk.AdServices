@@ -53,6 +53,13 @@ Landroid/adservices/adid/IGetAdIdProviderCallback$Default;->asBinder()Landroid/o
 Landroid/adservices/adid/IGetAdIdProviderCallback$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,system-api,test-api
 Landroid/adservices/adid/IGetAdIdProviderCallback$Stub;->asBinder()Landroid/os/IBinder;,public-api,system-api,test-api
 Landroid/adservices/adid/IGetAdIdProviderCallback$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult$1;->newArray(I)[Ljava/lang/Object;,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult;->describeContents()I,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Landroid/adservices/adid/RecreateAdIdResult;->writeToParcel(Landroid/os/Parcel;I)V,public-api,system-api,test-api
 Landroid/adservices/adselection/AdSelectionCallback$Default;->asBinder()Landroid/os/IBinder;,public-api,system-api,test-api
 Landroid/adservices/adselection/AdSelectionCallback$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,system-api,test-api
 Landroid/adservices/adselection/AdSelectionCallback$Stub;->asBinder()Landroid/os/IBinder;,public-api,system-api,test-api
@@ -1508,6 +1515,7 @@ Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda20;->te
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda21;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda22;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda23;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda24;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda2;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda3;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/adservices/flags/CustomFeatureFlags$$ExternalSyntheticLambda4;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
